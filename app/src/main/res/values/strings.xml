@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">Lazada Seller</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="title_select_image_from_gallery">Chọn ảnh từ thư viện</string>
+    <string name="title_select_image_from_camera">Chọn ảnh từ Camera</string>
+    <string name="error_load_file_image">Không thể tải hình ảnh</string>
+    <string name="empty_list">Danh sách trống</string>
+    <string name="error_loadmore">Không thể tải thêm.</string>
+
+    <string name="title_date_select_slideDateTimeDialog">Chọn ngày</string>
+    <string name="title_time_select_slideDateTimeDialog">Chọn giờ</string>
+
+    <string name="crash_dialog_ok_toast">Cảm ơn!</string>
+    <string name="crash_dialog_text">Đã xảy ra lỗi trong quá trình chạy ứng dụng, hãy click \'OK\' để gửi email về lỗi cho nhóm phát triển. \nTrân trọng cảm ơn!</string>
+    <string name="crash_dialog_title">Lỗi ứng dụng</string>
+    <string name="crash_notif_title">Lỗi ứng dụng</string>
+
+    <string name="txt_message_sign">Bạn phải đăng nhập để tiếp tục thực hiện</string>
+
+    <string name="login_error">Đăng nhập không thành công.</string>
+
+    <string name="title_forgot_pasword">Quên mật khẩu?</string>
+    <string name="title_button_register">Đăng ký mới ở đây</string>
+    <string name="title_login">Đăng nhập</string>
+    <string name="title_phone">Số điện thoại</string>
+    <string name="title_login_input">Nhập thông tin của bạn</string>
+    <string name="title_button_have_account">Tôi có tài khoản khác</string>
+    <string name="title_find_account">Tìm tài khoản của bạn \n Nhập số điện thoại để khôi phục</string>
+    <string name="title_sns_code_forgot_password">Chúng tôi sẽ gửi cho bạn mã để xác nhận tài khoản này là của bạn</string>
+    <string name="login_password">Mật khẩu</string>
+    <string name="lb_wellcome_app">Wellcome to APP</string>
+    <string name="splash_1">Nhận các đơn hàng từ khách hàng sau đó lên kế hoạch triển khai quy trình để đưa ra các bước hoạch định cho đội ngũ nhân viên</string>
+    <string name="splash_2">Với quy trình sản xuất khép kín và tối ưu nâng cao giá trị sản xuất và tiết kiệm thời gian cho khách hàng</string>
+    <string name="splash_3">Sau khi quy trình được hoàn tất với đội ngũ kiểm kê chất lượng sản phẩm giúp cho đầu ra được đạt chất lượng tối ưu, giảm thiểu chi phí và rủi ro khi đến tay khách hàng.</string>
+
+    <array name="order_status">
+        <item>Đặt hàng</item>
+        <item>Đã xác nhận &amp; gia công</item>
+        <item>Đóng gói &amp; giao hàng</item>
+        <item>Hoàn tất</item>
+        <item>Đã hủy</item>
+    </array>
+
+    <array name="order_production_status">
+        <item>Lệnh SX</item>
+        <item>Nhận NVL</item>
+        <item>Hoàn tất SX</item>
+        <item>Đang chờ nhập kho</item>
+        <item>Hoàn thành lệnh</item>
+    </array>
+
+    <array name="order_export_status">
+        <item>Khởi tạo</item>
+        <item>Chờ vận chuyển</item>
+        <item>Chờ hoàn tất</item>
+        <item>Hoàn tất vận chuyển</item>
+        <item>Đã hủy</item>
+    </array>
+</resources>
