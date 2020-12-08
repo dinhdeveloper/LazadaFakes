@@ -19,7 +19,7 @@ public class HomeActivityView extends BaseView<HomeActivityView.UIContainer> imp
 
     @Override
     public BaseUiContainer getUiContainer() {
-        return new HomeActivityView.UIContainer();
+        return new UIContainer();
     }
 
     @Override
@@ -27,7 +27,7 @@ public class HomeActivityView extends BaseView<HomeActivityView.UIContainer> imp
         return R.layout.dinh_admin_layout_activity_home;
     }
 
-    public class UIContainer extends BaseUiContainer {
+    public static class UIContainer extends BaseUiContainer {
         @UiElement(R.id.fragmentAdminDashboard)
         FrameLayout fragmentAdminDashboard;
     }

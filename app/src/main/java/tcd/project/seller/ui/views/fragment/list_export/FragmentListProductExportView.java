@@ -182,7 +182,7 @@ public class FragmentListProductExportView extends BaseView<FragmentListProductE
 
     @Override
     public BaseUiContainer getUiContainer() {
-        return new UIContainer();
+        return new FragmentListProductExportView.UIContainer();
     }
 
     @Override

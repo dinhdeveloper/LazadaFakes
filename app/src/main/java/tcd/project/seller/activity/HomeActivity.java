@@ -17,16 +17,20 @@ import tcd.project.seller.ui.views.activity.home_activity.HomeActivityViewInterf
 
 public class HomeActivity extends BaseFragmentActivity<HomeActivityViewInterface, BaseMainActionbarViewInterface, BaseParameters> implements BaseMainActionbarViewCallback, HomeActivityViewCallback, ActivityCompat.OnRequestPermissionsResultCallback, OnKeyboardVisibilityListener {
     private int isShowContainer = 0;
+    HomeActivity activity;
+
     @Override
     protected void initialize(Bundle savedInstanceState) {
-        view.init(this, this);
+        activity = HomeActivity.this;
+        view.init(activity, this);
         changeToFragmentListExport();
     }
 
     private void changeToFragmentListExport() {
-        isShowContainer++;
-        replaceFragment(new FragmentListProductExport(), false, Animation.SLIDE_IN_OUT);
+        isShowContainer = 0;
+        replaceFragment(new FragmentListProductExport(), false);
     }
+
     public void checkBack() {
 
         if (isShowContainer > 0) {
@@ -76,6 +80,7 @@ public class HomeActivity extends BaseFragmentActivity<HomeActivityViewInterface
             super.onBackPressed();
         }
     }
+
     @Override
     protected HomeActivityViewInterface getViewInstance() {
         return new HomeActivityView();
