@@ -12,9 +12,9 @@ import tcd.project.seller.dependency.AppProvider;
 import tcd.project.seller.event.FragmentNotificationBackEvent;
 import tcd.project.seller.helper.Consts;
 import tcd.project.seller.model.UserResponseModel;
-import tcd.project.seller.ui.views.fragment.notification.FragmentNotificationView;
-import tcd.project.seller.ui.views.fragment.notification.FragmentNotificationViewCallback;
-import tcd.project.seller.ui.views.fragment.notification.FragmentNotificationViewInterface;
+import tcd.project.seller.ui.fragment.notification.FragmentNotificationView;
+import tcd.project.seller.ui.fragment.notification.FragmentNotificationViewCallback;
+import tcd.project.seller.ui.fragment.notification.FragmentNotificationViewInterface;
 
 public class FragmentNotification extends BaseFragment<FragmentNotificationViewInterface, BaseParameters> implements FragmentNotificationViewCallback {
 

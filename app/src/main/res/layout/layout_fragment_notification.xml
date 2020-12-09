@@ -47,8 +47,7 @@
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recycler_view_list_notification"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                tools:listitem="@layout/row_item_notification" />
+                android:layout_height="match_parent"/>
         </b.laixuantam.myaarlibrary.widgets.cptr.PtrClassicFrameLayout>
 
         <include

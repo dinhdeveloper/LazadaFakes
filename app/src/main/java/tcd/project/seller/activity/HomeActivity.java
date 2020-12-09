@@ -8,12 +8,13 @@ import b.laixuantam.myaarlibrary.base.BaseFragmentActivity;
 import b.laixuantam.myaarlibrary.base.BaseParameters;
 import b.laixuantam.myaarlibrary.helper.OnKeyboardVisibilityListener;
 import tcd.project.seller.R;
+import tcd.project.seller.fragment.list_base.FragmentListBase;
 import tcd.project.seller.fragment.list_export.FragmentListProductExport;
+import tcd.project.seller.ui.activity.home_activity.HomeActivityView;
+import tcd.project.seller.ui.activity.home_activity.HomeActivityViewCallback;
+import tcd.project.seller.ui.activity.home_activity.HomeActivityViewInterface;
 import tcd.project.seller.ui.views.action_bar.base_main_actionbar.BaseMainActionbarViewCallback;
 import tcd.project.seller.ui.views.action_bar.base_main_actionbar.BaseMainActionbarViewInterface;
-import tcd.project.seller.ui.views.activity.home_activity.HomeActivityView;
-import tcd.project.seller.ui.views.activity.home_activity.HomeActivityViewCallback;
-import tcd.project.seller.ui.views.activity.home_activity.HomeActivityViewInterface;
 
 public class HomeActivity extends BaseFragmentActivity<HomeActivityViewInterface, BaseMainActionbarViewInterface, BaseParameters> implements BaseMainActionbarViewCallback, HomeActivityViewCallback, ActivityCompat.OnRequestPermissionsResultCallback, OnKeyboardVisibilityListener {
     private int isShowContainer = 0;
@@ -98,7 +99,7 @@ public class HomeActivity extends BaseFragmentActivity<HomeActivityViewInterface
 
     @Override
     protected int getFragmentContainerId() {
-        return R.id.fragmentAdminDashboard;
+        return R.id.content_frame;
     }
 
     @Override

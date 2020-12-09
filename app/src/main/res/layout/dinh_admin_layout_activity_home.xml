@@ -1,25 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg"
-    android:fitsSystemWindows="true"
-    android:orientation="vertical">
+    android:background="@color/bg_customer">
 
     <android.support.v4.widget.DrawerLayout
         android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/bg">
+        android:background="@color/bg_customer">
 
         <FrameLayout
-            android:id="@+id/fragmentAdminDashboard"
+            android:id="@+id/content_frame"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <include layout="@layout/layout_fragment_list_product_export"/>
         </FrameLayout>
+
+<!--        <com.nightonke.boommenu.BoomMenuButton-->
+<!--            android:id="@+id/bmb"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:bmb_buttonEnum="ham"-->
+<!--            app:bmb_piecePlaceEnum="piecePlace_ham_4"-->
+<!--            app:bmb_buttonPlaceEnum="buttonPlace_ham_4"-->
+<!--            />-->
+
     </android.support.v4.widget.DrawerLayout>
 
 

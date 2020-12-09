@@ -1,6 +1,11 @@
 package tcd.project.seller.fragment.list_export;
 
 import android.text.TextUtils;
+import android.util.Log;
+
+import java.sql.Date;
+import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
 
 import b.laixuantam.myaarlibrary.api.ApiRequest;
 import b.laixuantam.myaarlibrary.api.ErrorApiResponse;
@@ -14,27 +19,29 @@ import tcd.project.seller.dependency.AppProvider;
 import tcd.project.seller.dialog.option.OptionModel;
 import tcd.project.seller.model.BaseResponseModel;
 import tcd.project.seller.model.ProductExportModel;
-import tcd.project.seller.ui.views.fragment.list_export.FragmentListProductExportView;
-import tcd.project.seller.ui.views.fragment.list_export.FragmentListProductExportViewCallback;
-import tcd.project.seller.ui.views.fragment.list_export.FragmentListProductExportViewInterface;
+import tcd.project.seller.ui.fragment.list_base.FragmentAdminManagerListBaseViewCallback;
+import tcd.project.seller.ui.fragment.list_base.FragmentAdminManagerListBaseViewInterface;
+import tcd.project.seller.ui.fragment.list_export.FragmentListProductExportView;
+import tcd.project.seller.ui.fragment.list_export.FragmentListProductExportViewCallback;
+import tcd.project.seller.ui.fragment.list_export.FragmentListProductExportViewInterface;
 
-public class FragmentListProductExport extends BaseFragment<FragmentListProductExportViewInterface, BaseParameters> implements FragmentListProductExportViewCallback {
+public class FragmentListProductExport extends BaseFragment<FragmentAdminManagerListBaseViewInterface, BaseParameters> implements FragmentAdminManagerListBaseViewCallback {
     HomeActivity activity;
     private int page = 1;
     private int totalPage = 0;
 
     @Override
     protected void initialize() {
-        activity = (HomeActivity)getActivity();
-        view.init(activity,this);
+        activity = (HomeActivity) getActivity();
+        view.init(activity, this);
 
         requestDataListProductExport();
     }
+
     @Override
-    protected FragmentListProductExportViewInterface getViewInstance() {
+    protected FragmentAdminManagerListBaseViewInterface getViewInstance() {
         return new FragmentListProductExportView();
     }
-
     private void requestDataListProductExport() {
         if (!AppProvider.getConnectivityHelper().hasInternetConnection()) {
             showAlert(getContext().getResources().getString(R.string.error_internet_connection), KAlertDialog.ERROR_TYPE);
@@ -114,11 +121,6 @@ public class FragmentListProductExport extends BaseFragment<FragmentListProductE
     }
 
     @Override
-    public void onRequestSearchOrFilter(String key) {
-
-    }
-
-    @Override
     public void onItemListSelected(OptionModel item) {
 
     }
@@ -139,7 +141,7 @@ public class FragmentListProductExport extends BaseFragment<FragmentListProductE
     }
 
     @Override
-    public void onClickMore(OptionModel item) {
+    public void onRequestSearchWithFilter(String status, String key) {
 
     }
 

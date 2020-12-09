@@ -109,6 +109,18 @@ dependencies {
     implementation 'com.infideap.blockedittext:block-edittext:0.0.7'
     //shimmerlayout
     implementation 'io.supercharge:shimmerlayout:2.1.0'
+
+    //support google
+    //noinspection GradleCompatible
+    implementation 'com.android.support:support-compat:28.0.0'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:design:28.0.0'
+    //boommenu
+    implementation 'com.nightonke:boommenu:2.1.1'
+
 }
 repositories {
     mavenCentral()

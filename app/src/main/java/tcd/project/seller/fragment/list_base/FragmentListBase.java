@@ -6,9 +6,9 @@ import b.laixuantam.myaarlibrary.helper.MyLog;
 import tcd.project.seller.R;
 import tcd.project.seller.dialog.option.OptionModel;
 import tcd.project.seller.helper.Consts;
-import tcd.project.seller.ui.views.fragment.list_base.FragmentAdminManagerListBaseView;
-import tcd.project.seller.ui.views.fragment.list_base.FragmentAdminManagerListBaseViewCallback;
-import tcd.project.seller.ui.views.fragment.list_base.FragmentAdminManagerListBaseViewInterface;
+import tcd.project.seller.ui.fragment.list_base.FragmentAdminManagerListBaseView;
+import tcd.project.seller.ui.fragment.list_base.FragmentAdminManagerListBaseViewCallback;
+import tcd.project.seller.ui.fragment.list_base.FragmentAdminManagerListBaseViewInterface;
 
 public class FragmentListBase extends BaseFragment<FragmentAdminManagerListBaseViewInterface, BaseParameters> implements FragmentAdminManagerListBaseViewCallback {
 
