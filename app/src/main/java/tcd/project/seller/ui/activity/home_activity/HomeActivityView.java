@@ -7,6 +7,7 @@ import com.nightonke.boommenu.BoomMenuButton;
 import b.laixuantam.myaarlibrary.base.BaseUiContainer;
 import b.laixuantam.myaarlibrary.base.BaseView;
 import tcd.project.seller.R;
+import tcd.project.seller.activity.BuilderManager;
 import tcd.project.seller.activity.HomeActivity;
 
 public class HomeActivityView extends BaseView<HomeActivityView.UIContainer> implements HomeActivityViewInterface {
@@ -17,6 +18,10 @@ public class HomeActivityView extends BaseView<HomeActivityView.UIContainer> imp
     public void init(HomeActivity activity, HomeActivityViewCallback callback) {
         this.activity = activity;
         this.callback = callback;
+
+        ui.bmb2.setDuration(1000);
+        for (int i = 0; i < ui.bmb2.getPiecePlaceEnum().pieceNumber(); i++)
+            ui.bmb2.addBuilder(BuilderManager.getHamButtonBuilderWithDifferentPieceColor());
     }
 
     @Override
@@ -29,8 +34,8 @@ public class HomeActivityView extends BaseView<HomeActivityView.UIContainer> imp
         return R.layout.dinh_admin_layout_activity_home;
     }
 
-    public static class UIContainer extends BaseUiContainer {
-//        @UiElement(R.id.bmb)
-//        BoomMenuButton menuButton;
+    public class UIContainer extends BaseUiContainer {
+        @UiElement(R.id.bmb2)
+        BoomMenuButton bmb2 = (BoomMenuButton)findViewById(R.id.bmb2);
     }
 }

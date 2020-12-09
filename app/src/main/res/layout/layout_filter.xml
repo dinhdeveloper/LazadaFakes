@@ -14,9 +14,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="7dp"
             android:layout_marginRight="20dp"
-            android:layout_marginBottom="5dp"
+            android:layout_marginBottom="7dp"
             android:layout_toLeftOf="@+id/layoutActionButton"
             android:background="@drawable/border_shape_white_layout_toolbar_search_contact"
             android:orientation="horizontal">
@@ -28,6 +28,7 @@
                 android:clickable="true"
                 android:padding="7dp"
                 android:src="@drawable/ic_search"
+                android:tint="@color/blue_light"
                 android:visibility="visible" />
 
             <EditText
@@ -61,6 +62,7 @@
 
             <ImageView
                 android:id="@+id/btnAction2"
+                android:layout_gravity="center"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:background="?attr/selectableItemBackground"
@@ -72,6 +74,7 @@
 
             <ImageView
                 android:id="@+id/btnAction1"
+                android:layout_gravity="center"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:background="?attr/selectableItemBackground"
@@ -79,7 +82,7 @@
                 android:padding="7dp"
                 android:src="@drawable/ic_add_module"
                 android:visibility="gone"
-                android:tint="@color/bg_button_primary"
+                android:tint="@color/blue_light"
                 tools:visibility="visible" />
 
         </LinearLayout>
