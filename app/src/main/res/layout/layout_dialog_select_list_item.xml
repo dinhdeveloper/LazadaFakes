@@ -29,8 +29,7 @@
         android:id="@+id/lvListSelect"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/edtSearch"
-        tools:listitem="@layout/row_item_product">
+        android:layout_below="@id/edtSearch">
 
     </ListView>
 

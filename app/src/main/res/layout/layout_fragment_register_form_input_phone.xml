@@ -22,7 +22,7 @@
             android:textSize="18sp"
             android:visibility="visible" />
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/title_phone"
@@ -39,7 +39,7 @@
                 android:singleLine="true"
                 android:textColor="@color/white" />
 
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:layout_width="wrap_content"

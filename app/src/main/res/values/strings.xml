@@ -57,4 +57,19 @@
         <item>Hoàn tất vận chuyển</item>
         <item>Đã hủy</item>
     </array>
+
+    <string name="home">Trang chủ</string>
+    <string name="home_sub">Quản lý danh sách bán hàng</string>
+
+    <string name="list_import">Kho hàng</string>
+    <string name="list_import_sub">Kho hàng chứa sản phẩm</string>
+
+    <string name="import_">Nhập hàng</string>
+    <string name="import_sub">Đăng sản phẩm nhập hàng</string>
+
+    <string name="export_">Xuất hàng</string>
+    <string name="export_sub">Đăng sản phẩm xuất hàng</string>
+
+    <string name="profile">Cá nhân</string>
+    <string name="profile_sub">Thông tin cá nhân</string>
 </resources>

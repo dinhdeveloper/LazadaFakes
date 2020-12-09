@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:layout_above="@+id/bubbleTabBar"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_marginHorizontal="@dimen/dp10"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textSize="20sp"
+                android:paddingVertical="@dimen/dp10"
+                android:layout_marginVertical="@dimen/dp10"
+                android:text="Thêm sản phẩm"
+                android:textColor="@color/color_orange"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_marginVertical="@dimen/dp5"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="1"
+                    android:paddingVertical="@dimen/dp5"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/gotu_regular"
+                    android:text="Tên sản phẩm(*)"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/tvProductName"
+                    android:textSize="16sp"
+                    android:gravity="start|center"
+                    android:drawableEnd="@drawable/ic_bottom_down"
+                    android:layout_gravity="center"
+                    android:paddingHorizontal="@dimen/dp5"
+                    android:hint="Chọn sản phẩm"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"/>
+            </LinearLayout>
+            <!--end-->
+
+            <LinearLayout
+                android:layout_marginVertical="@dimen/dp10"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="1"
+                    android:paddingVertical="@dimen/dp5"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/gotu_regular"
+                    android:text="Số lượng bán(*)"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <b.laixuantam.myaarlibrary.widgets.currencyedittext.CurrencyEditText
+                    android:id="@+id/edtProductQuantity"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    android:paddingHorizontal="@dimen/dp5"
+                    android:hint="Nhập số lượng bán"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"/>
+            </LinearLayout>
+            <!--end-->
+            <LinearLayout
+                android:layout_marginVertical="@dimen/dp5"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="1"
+                    android:paddingVertical="@dimen/dp5"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/gotu_regular"
+                    android:text="Người mua(*)"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:id="@+id/edtCustomerName"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    android:paddingHorizontal="@dimen/dp5"
+                    android:hint="Nhập người mua"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"/>
+            </LinearLayout>
+            <!--end-->
+            <LinearLayout
+                android:layout_marginVertical="@dimen/dp10"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="1"
+                    android:paddingVertical="@dimen/dp5"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/gotu_regular"
+                    android:text="SĐT người mua(*)"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <com.canhdinh.lib.edittext.FormattedEditText
+                    android:id="@+id/edtCustomerPhone"
+                    android:inputType="phone"
+                    android:maxLength="13"
+                    app:fet_clearDrawable="@drawable/icon_clear"
+                    app:fet_drawableGravity="fet_center"
+                    app:fet_drawablePadding="4dp"
+                    app:fet_formatStyle="344"
+                    app:fet_mode="mode_simple"
+                    app:fet_placeholder="."
+                    android:imeOptions="actionNext"
+                    android:paddingHorizontal="@dimen/dp5"
+                    android:hint="Nhập SĐT người mua"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"/>
+            </LinearLayout>
+            <!--end-->
+            <LinearLayout
+                android:layout_marginVertical="@dimen/dp5"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="1"
+                    android:paddingVertical="@dimen/dp5"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/gotu_regular"
+                    android:text="Địa chỉ người mua(*)"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:id="@+id/edtCustomerAddress"
+                    android:inputType="text"
+                    android:imeOptions="actionDone"
+                    android:paddingHorizontal="@dimen/dp5"
+                    android:hint="Nhập địa chỉ người mua"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"/>
+            </LinearLayout>
+            <!--end-->
+
+            <TextView
+                android:id="@+id/tvDangGiao"
+                android:drawablePadding="@dimen/dp10"
+                android:paddingVertical="@dimen/dp5"
+                android:layout_gravity="start"
+                android:drawableLeft="@drawable/ic_stick_successfull"
+                android:textStyle="normal"
+                android:textSize="16sp"
+                android:fontFamily="@font/gotu_regular"
+                android:textColor="@color/black"
+                android:text="Đang giao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvDaGiao"
+                android:drawablePadding="@dimen/dp10"
+                android:paddingVertical="@dimen/dp5"
+                android:layout_gravity="start"
+                android:drawableLeft="@drawable/ic_stick__nosuccessfull_"
+                android:textStyle="normal"
+                android:textSize="16sp"
+                android:fontFamily="@font/gotu_regular"
+                android:textColor="@color/black"
+                android:text="Đã giao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <b.laixuantam.myaarlibrary.widgets.roundview.RoundTextView
+                android:id="@+id/btnSubmit"
+                android:layout_marginVertical="@dimen/dp20"
+                android:textColor="@color/white"
+                android:text="Thêm mới"
+                android:gravity="center"
+                android:layout_gravity="center"
+                app:rv_cornerRadius="22dp"
+                app:rv_backgroundColor="@color/color_orange"
+                android:layout_width="200dp"
+                android:layout_height="42dp"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

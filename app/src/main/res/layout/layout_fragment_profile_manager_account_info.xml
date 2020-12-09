@@ -13,7 +13,7 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Họ tên"
@@ -32,7 +32,7 @@
                 android:textSize="14sp"
                 tools:text="fullname" />
 
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -146,7 +146,7 @@
                 android:background="@color/black" />
         </LinearLayout>
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email"
@@ -163,9 +163,9 @@
                 android:singleLine="true"
                 android:textColor="@color/black" />
 
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
@@ -187,9 +187,9 @@
                 android:textSize="14sp"
                 tools:text="0123456789" />
 
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Địa chỉ cá nhân"
@@ -208,9 +208,9 @@
                 android:textSize="14sp"
                 tools:text="address" />
 
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email"
@@ -230,7 +230,7 @@
                 android:textSize="14sp"
                 tools:text="email" />
 
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
 
         <LinearLayout

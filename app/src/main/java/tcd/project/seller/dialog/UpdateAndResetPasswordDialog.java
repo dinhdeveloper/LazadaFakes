@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatDialog;
 import android.text.InputType;
 import android.text.TextUtils;
 import android.view.View;
@@ -12,6 +11,8 @@ import android.view.Window;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatDialog;
 
 import java.util.Objects;
 

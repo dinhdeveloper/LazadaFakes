@@ -1,4 +1,4 @@
-package tcd.project.seller.ui.views.activity.notify_manager_activity;
+package tcd.project.seller.ui.activity.notify_manager_activity;
 
 import android.widget.FrameLayout;
 import android.widget.TextView;

@@ -1,6 +1,7 @@
 package tcd.project.seller.model;
 
-import android.support.annotation.Nullable;
+
+import androidx.annotation.Nullable;
 
 public class NotificationModel extends BaseResponseModel {
 

@@ -3,6 +3,7 @@ package tcd.project.seller.adapter.seller;
 import android.content.Context;
 import android.graphics.Color;
 import android.text.TextUtils;
+import android.view.View;
 import android.widget.TextView;
 
 import java.util.List;
@@ -40,7 +41,7 @@ public class ListProductExportAdapter extends SuperAdapter<OptionModel> {
         TextView tvCustomerPhone = itemView.findViewById(R.id.tvCustomerPhone);
         TextView tvCustomerAddress = itemView.findViewById(R.id.tvCustomerAddress);
 
-        ProductExportModel model = (ProductExportModel)item.getDtaCustom();
+        ProductExportModel model = (ProductExportModel) item.getDtaCustom();
 
         tvSTT.setText(String.valueOf(layoutPosition));
         if (!TextUtils.isEmpty(model.getProduct_name())) {
@@ -56,8 +57,11 @@ public class ListProductExportAdapter extends SuperAdapter<OptionModel> {
             tvCustomerAddress.setText("ĐC: " + model.getCustomer_address());
         }
         if (!TextUtils.isEmpty(model.getType_order()) && model.getType_order().equalsIgnoreCase("0")) {
+            tvChange.setVisibility(View.VISIBLE);
             tvStatus.setText("Đang giao hàng");
-        } else {
+            tvStatus.setTextColor(Color.parseColor("#000000"));
+        } else{
+            tvChange.setVisibility(View.GONE);
             tvStatus.setTextColor(Color.parseColor("#27c24c"));
             tvStatus.setText("Đã giao hàng");
         }

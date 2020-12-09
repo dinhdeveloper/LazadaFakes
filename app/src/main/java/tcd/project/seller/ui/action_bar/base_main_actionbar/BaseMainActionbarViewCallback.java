@@ -1,4 +1,4 @@
-package tcd.project.seller.ui.views.action_bar.base_main_actionbar;
+package tcd.project.seller.ui.action_bar.base_main_actionbar;
 
 /**
  * Created by laixuantam on 23/7/18.

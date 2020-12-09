@@ -1,11 +1,13 @@
 package tcd.project.seller.ui.activity.base_main_activity;
 
 import android.graphics.Color;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
 import android.view.View;
 import android.widget.FrameLayout;
+
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+
+import com.google.android.material.navigation.NavigationView;
 
 import b.laixuantam.myaarlibrary.base.BaseUiContainer;
 import b.laixuantam.myaarlibrary.base.BaseView;

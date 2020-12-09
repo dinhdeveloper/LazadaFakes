@@ -1,20 +1,27 @@
 package tcd.project.seller.activity;
 
+import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.FragmentManager;
+import android.os.Handler;
+import android.view.View;
+
+import androidx.core.app.ActivityCompat;
+import androidx.fragment.app.FragmentManager;
 
 import b.laixuantam.myaarlibrary.base.BaseFragmentActivity;
 import b.laixuantam.myaarlibrary.base.BaseParameters;
 import b.laixuantam.myaarlibrary.helper.OnKeyboardVisibilityListener;
 import tcd.project.seller.R;
+import tcd.project.seller.fragment.export_product.FragmentExportProduct;
+import tcd.project.seller.fragment.import_product.FragmentImportProduct;
 import tcd.project.seller.fragment.list_base.FragmentListBase;
 import tcd.project.seller.fragment.list_export.FragmentListProductExport;
+import tcd.project.seller.fragment.list_import.FragmentListProductImport;
+import tcd.project.seller.ui.action_bar.base_main_actionbar.BaseMainActionbarViewCallback;
+import tcd.project.seller.ui.action_bar.base_main_actionbar.BaseMainActionbarViewInterface;
 import tcd.project.seller.ui.activity.home_activity.HomeActivityView;
 import tcd.project.seller.ui.activity.home_activity.HomeActivityViewCallback;
 import tcd.project.seller.ui.activity.home_activity.HomeActivityViewInterface;
-import tcd.project.seller.ui.views.action_bar.base_main_actionbar.BaseMainActionbarViewCallback;
-import tcd.project.seller.ui.views.action_bar.base_main_actionbar.BaseMainActionbarViewInterface;
 
 public class HomeActivity extends BaseFragmentActivity<HomeActivityViewInterface, BaseMainActionbarViewInterface, BaseParameters> implements BaseMainActionbarViewCallback, HomeActivityViewCallback, ActivityCompat.OnRequestPermissionsResultCallback, OnKeyboardVisibilityListener {
     private int isShowContainer = 0;
@@ -27,9 +34,39 @@ public class HomeActivity extends BaseFragmentActivity<HomeActivityViewInterface
         changeToFragmentListExport();
     }
 
-    private void changeToFragmentListExport() {
+    public void FullScreencall() {
+        if (Build.VERSION.SDK_INT > 11 && Build.VERSION.SDK_INT < 19) { // lower api
+            View v = this.getWindow().getDecorView();
+            v.setSystemUiVisibility(View.GONE);
+        } else if (Build.VERSION.SDK_INT >= 19) {
+            //for new api versions.
+            View decorView = getWindow().getDecorView();
+            int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
+            decorView.setSystemUiVisibility(uiOptions);
+        }
+    }
+    @Override
+    public void changeToFragmentListExport() {
         isShowContainer = 0;
-        replaceFragment(new FragmentListProductExport(), false);
+        replaceFragment(new FragmentListProductExport(), true, Animation.SLIDE_IN_OUT);
+    }
+
+    @Override
+    public void changeToFragmentListImport() {
+        isShowContainer++;
+        replaceFragment(new FragmentListProductImport(), true, Animation.SLIDE_IN_OUT);
+    }
+
+    @Override
+    public void changeToFragmentExportProduct() {
+        isShowContainer ++;
+        replaceFragment(new FragmentExportProduct(), true, Animation.SLIDE_IN_OUT);
+    }
+
+    @Override
+    public void changeToFragmentImportProduct() {
+        isShowContainer ++;
+        replaceFragment(new FragmentImportProduct(), true, Animation.SLIDE_IN_OUT);
     }
 
     public void checkBack() {

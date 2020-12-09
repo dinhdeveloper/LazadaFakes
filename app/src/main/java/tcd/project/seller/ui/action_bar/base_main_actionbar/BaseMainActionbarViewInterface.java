@@ -1,7 +1,8 @@
-package tcd.project.seller.ui.views.action_bar.base_main_actionbar;
+package tcd.project.seller.ui.action_bar.base_main_actionbar;
 
-import android.support.annotation.ColorRes;
-import android.support.annotation.DrawableRes;
+
+import androidx.annotation.ColorRes;
+import androidx.annotation.DrawableRes;
 
 import b.laixuantam.myaarlibrary.base.BaseActionbarView;
 

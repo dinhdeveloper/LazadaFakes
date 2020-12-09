@@ -2,7 +2,8 @@ package tcd.project.seller;
 
 import android.app.Application;
 import android.content.Context;
-import android.support.multidex.MultiDex;
+
+import androidx.multidex.MultiDex;
 
 import b.laixuantam.myaarlibrary.helper.MyLifecycleHandler;
 import b.laixuantam.myaarlibrary.helper.MyLog;

@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/list_export"
+        android:icon="@drawable/ic_home_while"
+        android:title="Trang chủ"
+        android:checked="true"
+        android:iconTint="@color/home"/>
+
+    <item
+        android:id="@+id/list_import"
+        android:icon="@drawable/ic_icon_warehouse_while"
+        android:title="Kho hàng"
+        android:iconTint="@color/logger"/>
+    <item
+        android:id="@+id/export_product"
+        android:icon="@drawable/ic_icon_export_while"
+        android:title="Xuất hàng"
+        android:iconTint="@color/documents"/>
+    <item
+        android:id="@+id/import_product"
+        android:icon="@drawable/ic_import_1"
+        android:title="Nhập hàng"
+        android:iconTint="@color/settings"/>
+</menu>

@@ -11,10 +11,10 @@ import b.laixuantam.myaarlibrary.base.BaseParameters;
 import tcd.project.seller.R;
 import tcd.project.seller.event.FragmentNotificationBackEvent;
 import tcd.project.seller.fragment.notification.FragmentNotification;
-import tcd.project.seller.ui.views.action_bar.base_main_actionbar.BaseMainActionbarViewInterface;
-import tcd.project.seller.ui.views.activity.notify_manager_activity.NotificationManagerActivityView;
-import tcd.project.seller.ui.views.activity.notify_manager_activity.NotificationManagerActivityViewCallback;
-import tcd.project.seller.ui.views.activity.notify_manager_activity.NotificationManagerActivityViewInterface;
+import tcd.project.seller.ui.action_bar.base_main_actionbar.BaseMainActionbarViewInterface;
+import tcd.project.seller.ui.activity.notify_manager_activity.NotificationManagerActivityView;
+import tcd.project.seller.ui.activity.notify_manager_activity.NotificationManagerActivityViewCallback;
+import tcd.project.seller.ui.activity.notify_manager_activity.NotificationManagerActivityViewInterface;
 
 public class NotificationManagerActivity extends BaseFragmentActivity<NotificationManagerActivityViewInterface, BaseMainActionbarViewInterface, BaseParameters> implements NotificationManagerActivityViewCallback {
 

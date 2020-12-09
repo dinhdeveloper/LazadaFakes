@@ -1,4 +1,4 @@
-package tcd.project.seller.ui.views.action_bar.base_main_actionbar;
+package tcd.project.seller.ui.action_bar.base_main_actionbar;
 
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -12,6 +12,7 @@ import b.laixuantam.myaarlibrary.base.BaseUiContainer;
 import b.laixuantam.myaarlibrary.base.BaseView;
 import b.laixuantam.myaarlibrary.helper.AppUtils;
 import tcd.project.seller.R;
+import tcd.project.seller.ui.action_bar.base_main_actionbar.BaseMainActionbarViewInterface;
 
 /**
  * Created by laixuantam on 23/7/18.

@@ -1,6 +1,7 @@
 package tcd.project.seller.api.seller;
 
-import android.support.annotation.Nullable;
+
+import androidx.annotation.Nullable;
 
 import b.laixuantam.myaarlibrary.api.ApiRequest;
 import b.laixuantam.myaarlibrary.api.BaseApiParams;

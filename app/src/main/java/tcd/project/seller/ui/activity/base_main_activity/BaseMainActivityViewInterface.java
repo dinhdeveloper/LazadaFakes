@@ -1,6 +1,7 @@
 package tcd.project.seller.ui.activity.base_main_activity;
 
-import android.support.annotation.IdRes;
+
+import androidx.annotation.IdRes;
 
 import b.laixuantam.myaarlibrary.base.BaseViewInterface;
 import b.laixuantam.myaarlibrary.widgets.tutorial.TutorialModel;
