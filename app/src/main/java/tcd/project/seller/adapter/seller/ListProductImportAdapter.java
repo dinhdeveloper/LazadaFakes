@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import b.laixuantam.myaarlibrary.helper.CurrencyFormater;
 import b.laixuantam.myaarlibrary.widgets.superadapter.SuperAdapter;
 import b.laixuantam.myaarlibrary.widgets.superadapter.SuperViewHolder;
 import tcd.project.seller.R;
@@ -52,9 +53,20 @@ public class ListProductImportAdapter extends SuperAdapter<OptionModel> {
         if (!TextUtils.isEmpty(model.getEmployee_phone())) {
             tvEmployeePhone.setText(model.getEmployee_phone());
         }
-        if (!TextUtils.isEmpty(model.getProduct_price())) {
-            tvPriceProduct.setText(model.getProduct_price());
+        if (!TextUtils.isEmpty(model.getQuantity_import())) {
+            tvStatus.setText("Tồn kho: "+CurrencyFormater.formatCurrency(Double.valueOf(model.getQuantity_import())));
+
+            if (Double.valueOf(model.getQuantity_import()) < Double.valueOf(model.getSafe_stock())) {
+                tvStatus.setTextColor(Color.parseColor("#e31b23"));
+            }else {
+                tvStatus.setTextColor(Color.parseColor("#2082F9"));
+            }
         }
+
+        if (!TextUtils.isEmpty(model.getProduct_price())) {
+            tvPriceProduct.setText(CurrencyFormater.formatCurrency(Double.valueOf(model.getProduct_price())));
+        }
+
 //        if (!TextUtils.isEmpty(model.getType_order()) && model.getType_order().equalsIgnoreCase("0")) {
 //            tvStatus.setText("Đang giao hàng");
 //        } else {

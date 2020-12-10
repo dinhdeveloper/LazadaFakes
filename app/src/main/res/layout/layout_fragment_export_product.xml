@@ -21,7 +21,7 @@
                 android:textSize="20sp"
                 android:paddingVertical="@dimen/dp10"
                 android:layout_marginVertical="@dimen/dp10"
-                android:text="Thêm sản phẩm"
+                android:text="Xuất sản phẩm"
                 android:textColor="@color/color_orange"
                 android:layout_gravity="center"
                 android:gravity="center"
@@ -46,13 +46,14 @@
                     android:layout_height="wrap_content"/>
                 <TextView
                     android:id="@+id/tvProductName"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
                     android:gravity="start|center"
                     android:drawableEnd="@drawable/ic_bottom_down"
                     android:layout_gravity="center"
                     android:paddingHorizontal="@dimen/dp5"
                     android:hint="Chọn sản phẩm"
-                    android:background="@color/white"
+                    android:background="@drawable/custom_bg_item"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"/>
             </LinearLayout>
@@ -75,11 +76,13 @@
                     android:layout_height="wrap_content"/>
                 <b.laixuantam.myaarlibrary.widgets.currencyedittext.CurrencyEditText
                     android:id="@+id/edtProductQuantity"
+                    android:layout_gravity="center"
+                    android:gravity="start|center"
                     android:inputType="text"
                     android:imeOptions="actionNext"
                     android:paddingHorizontal="@dimen/dp5"
                     android:hint="Nhập số lượng bán"
-                    android:background="@color/white"
+                    android:background="@drawable/custom_bg_item"
                     android:layout_width="match_parent"
                     android:layout_height="38dp"/>
             </LinearLayout>
@@ -101,11 +104,13 @@
                     android:layout_height="wrap_content"/>
                 <EditText
                     android:id="@+id/edtCustomerName"
+                    android:layout_gravity="center"
+                    android:gravity="start|center"
                     android:inputType="text"
                     android:imeOptions="actionNext"
                     android:paddingHorizontal="@dimen/dp5"
                     android:hint="Nhập người mua"
-                    android:background="@color/white"
+                    android:background="@drawable/custom_bg_item"
                     android:layout_width="match_parent"
                     android:layout_height="38dp"/>
             </LinearLayout>
@@ -120,13 +125,15 @@
                     android:paddingVertical="@dimen/dp5"
                     android:textSize="16sp"
                     android:fontFamily="@font/gotu_regular"
-                    android:text="SĐT người mua(*)"
+                    android:text="SĐT người mua"
                     android:textColor="@color/black"
                     android:textStyle="normal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <com.canhdinh.lib.edittext.FormattedEditText
                     android:id="@+id/edtCustomerPhone"
+                    android:layout_gravity="center"
+                    android:gravity="start|center"
                     android:inputType="phone"
                     android:maxLength="13"
                     app:fet_clearDrawable="@drawable/icon_clear"
@@ -138,7 +145,7 @@
                     android:imeOptions="actionNext"
                     android:paddingHorizontal="@dimen/dp5"
                     android:hint="Nhập SĐT người mua"
-                    android:background="@color/white"
+                    android:background="@drawable/custom_bg_item"
                     android:layout_width="match_parent"
                     android:layout_height="38dp"/>
             </LinearLayout>
@@ -153,18 +160,20 @@
                     android:paddingVertical="@dimen/dp5"
                     android:textSize="16sp"
                     android:fontFamily="@font/gotu_regular"
-                    android:text="Địa chỉ người mua(*)"
+                    android:text="Địa chỉ người mua"
                     android:textColor="@color/black"
                     android:textStyle="normal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <EditText
                     android:id="@+id/edtCustomerAddress"
+                    android:layout_gravity="center"
+                    android:gravity="start|center"
                     android:inputType="text"
                     android:imeOptions="actionDone"
                     android:paddingHorizontal="@dimen/dp5"
                     android:hint="Nhập địa chỉ người mua"
-                    android:background="@color/white"
+                    android:background="@drawable/custom_bg_item"
                     android:layout_width="match_parent"
                     android:layout_height="38dp"/>
             </LinearLayout>

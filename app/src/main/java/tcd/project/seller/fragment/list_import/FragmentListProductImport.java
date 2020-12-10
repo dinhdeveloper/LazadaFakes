@@ -15,6 +15,7 @@ import tcd.project.seller.dependency.AppProvider;
 import tcd.project.seller.dialog.option.OptionModel;
 import tcd.project.seller.model.BaseResponseModel;
 import tcd.project.seller.model.ProductExportModel;
+import tcd.project.seller.model.ProductImportModel;
 import tcd.project.seller.ui.fragment.list_base.FragmentAdminManagerListBaseViewCallback;
 import tcd.project.seller.ui.fragment.list_base.FragmentAdminManagerListBaseViewInterface;
 import tcd.project.seller.ui.fragment.list_export.FragmentListProductExportView;
@@ -53,9 +54,9 @@ public class FragmentListProductImport extends BaseFragment<FragmentAdminManager
         params.page = String.valueOf(page);
         params.limit = "20";
 
-        AppProvider.getApiManagement().call(RequestListProductImport.class, params, new ApiRequest.ApiCallback<BaseResponseModel<ProductExportModel>>() {
+        AppProvider.getApiManagement().call(RequestListProductImport.class, params, new ApiRequest.ApiCallback<BaseResponseModel<ProductImportModel>>() {
             @Override
-            public void onSuccess(BaseResponseModel<ProductExportModel> result) {
+            public void onSuccess(BaseResponseModel<ProductImportModel> result) {
 
                 dismissProgress();
                 if (!TextUtils.isEmpty(result.getSuccess()) && result.getSuccess().equalsIgnoreCase("true")) {

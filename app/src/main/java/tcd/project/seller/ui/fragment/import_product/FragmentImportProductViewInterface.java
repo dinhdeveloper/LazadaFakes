@@ -6,4 +6,6 @@ import tcd.project.seller.activity.HomeActivity;
 public interface FragmentImportProductViewInterface extends BaseViewInterface {
 
     void init(HomeActivity activity,FragmentImportProductViewCallback callback);
+
+    void clearDataInsert();
 }

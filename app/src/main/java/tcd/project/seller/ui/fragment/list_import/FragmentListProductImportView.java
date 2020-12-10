@@ -214,7 +214,7 @@ public class FragmentListProductImportView extends BaseView<FragmentListProductI
     @Override
     public void resetListData() {
         listDatas.clear();
-//        orderManagerAdapter.notifyDataSetChanged();
+        productImportAdapter.notifyDataSetChanged();
         ui.recycler_view_list_.getRecycledViewPool().clear();
     }
 

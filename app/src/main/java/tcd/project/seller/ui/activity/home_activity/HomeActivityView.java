@@ -125,6 +125,6 @@ public class HomeActivityView extends BaseView<HomeActivityView.UIContainer> imp
 
     public class UIContainer extends BaseUiContainer {
         @UiElement(R.id.bubbleTabBar)
-        BubbleTabBar bubbleTabBar = (BubbleTabBar) findViewById(R.id.bubbleTabBar);
+        public BubbleTabBar bubbleTabBar;
     }
 }

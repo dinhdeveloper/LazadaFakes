@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginVertical="@dimen/dp20"
+        android:gravity="center"
+        android:text="Danh sách sản phẩm"
+        android:textColor="@color/color_orange"
+        android:textSize="@dimen/dp20"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/layout_search"
+        android:layout_below="@+id/tvStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            layout="@layout/dinh_layout_search" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/layout_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <include
+            android:id="@+id/layoutEmptyList"
+            layout="@layout/layout_empty_list"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/dp20"
+        android:paddingVertical="@dimen/dp10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center|start"
+            android:paddingHorizontal="30dp"
+            android:text="Hủy bỏ"
+            android:textColor="@color/color_orange"
+            android:textSize="@dimen/dp15"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btnOk"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center|end"
+            android:paddingHorizontal="30dp"
+            android:text="OK"
+            android:textColor="@color/info"
+            android:textSize="@dimen/dp15"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>
