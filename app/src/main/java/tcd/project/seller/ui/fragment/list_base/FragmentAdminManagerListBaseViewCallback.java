@@ -18,4 +18,6 @@ public interface FragmentAdminManagerListBaseViewCallback {
     void onDeleteItemSelected(OptionModel item);
 
     void onClickFilter();
+
+    void doLogout();
 }

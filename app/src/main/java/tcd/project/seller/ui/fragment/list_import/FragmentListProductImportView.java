@@ -5,11 +5,14 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -55,6 +58,23 @@ public class FragmentListProductImportView extends BaseView<FragmentListProductI
         KeyboardUtils.setupUI(getView(), activity);
         setGone(ui.actionAdd);
         setVisible(ui.actionFilter);
+
+        ui.imvMore.setOnClickListener(view -> {
+            if (callback != null) {
+                callback.doLogout();
+            }
+        });
+
+        Calendar calendar = Calendar.getInstance();
+        int hour = calendar.get(Calendar.HOUR_OF_DAY);
+        if (hour > 12 && hour < 18) {
+            ui.tvHello.setText("Chào buổi chiều ");
+        } else if (hour > 18 && hour < 24) {
+            ui.tvHello.setText("Chào buổi tối ");
+        } else {
+            ui.tvHello.setText("Chào buổi sáng ");
+        }
+
 
         ui.edit_filter_.addTextChangedListener(new TextWatcher() {
             @Override
@@ -265,6 +285,13 @@ public class FragmentListProductImportView extends BaseView<FragmentListProductI
 
         @UiElement(R.id.layoutEmptyList)
         public View layoutEmptyList;
+
+        @UiElement(R.id.tvHello)
+        public TextView tvHello;
+
+        @UiElement(R.id.imvMore)
+        public ImageView imvMore;
+
 
     }
 }

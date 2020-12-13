@@ -25,7 +25,7 @@ public class SplashActivity extends Activity {
     private View layoutSplash3;
     private View loadingView;
 
-    private final Integer[] IMAGES = {R.drawable.dinh_bg_splash_1, R.drawable.dinh_bg_splash_2, R.drawable.dinh_bg_splash_3};
+    private final Integer[] IMAGES = {R.drawable.alert_dialog_button_cancel_bg, R.drawable.alert_dialog_button_confirm_bg, R.drawable.alert_dialog_button_cancel_bg};
     private final ArrayList<Integer> ImagesArray = new ArrayList<>();
 
     @Override

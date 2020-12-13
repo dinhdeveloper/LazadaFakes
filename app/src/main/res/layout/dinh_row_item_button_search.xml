@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:rv="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginHorizontal="@dimen/dp15"
+    android:paddingVertical="@dimen/dp20"
+    android:orientation="horizontal">
+    <b.laixuantam.myaarlibrary.widgets.roundview.RoundTextView
+        android:id="@+id/btnCancel"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/dp5"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Từ chối"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        rv:rv_backgroundColor="@color/bg_placeholder"
+        rv:rv_backgroundPressColor="#383838"
+        rv:rv_cornerRadius="30dp"
+        rv:rv_strokeWidth="1dp"
+        rv:rv_textPressColor="#ffffff"
+        tools:ignore="MissingPrefix" />
+
+    <b.laixuantam.myaarlibrary.widgets.roundview.RoundTextView
+        android:id="@+id/btnSearch"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/dp5"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Tìm kiếm"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        rv:rv_backgroundColor="@color/color_orange"
+        rv:rv_backgroundPressColor="#383838"
+        rv:rv_cornerRadius="30dp"
+        rv:rv_strokeWidth="1dp"
+        rv:rv_textPressColor="#ffffff"
+        tools:ignore="MissingPrefix" />
+</LinearLayout>

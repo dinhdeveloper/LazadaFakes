@@ -106,4 +106,9 @@ public class FragmentListBase extends BaseFragment<FragmentAdminManagerListBaseV
     public void onClickFilter() {
 
     }
+
+    @Override
+    public void doLogout() {
+
+    }
 }

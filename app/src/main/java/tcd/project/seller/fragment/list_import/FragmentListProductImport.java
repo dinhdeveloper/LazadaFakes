@@ -1,5 +1,6 @@
 package tcd.project.seller.fragment.list_import;
 
+import android.app.Dialog;
 import android.text.TextUtils;
 
 import b.laixuantam.myaarlibrary.api.ApiRequest;
@@ -91,6 +92,20 @@ public class FragmentListProductImport extends BaseFragment<FragmentAdminManager
                 showAlert("Không thể tải dữ liệu.", KAlertDialog.ERROR_TYPE);
             }
         });
+    }
+
+    @Override
+    public void doLogout() {
+        showConfirmAlert("Đăng xuất", "Bạn có muốn đăng xuất tài khoản?", kAlertDialog -> {
+            kAlertDialog.dismiss();
+            AppProvider.getPreferences().clear();
+            AppProvider.getPreferences().saveUserModel(null);
+            AppProvider.getPreferences().saveStatusLogin(false);
+            AppProvider.getPreferences().saveFirstInstall(false);
+//            Intent intent = new Intent(AdminActivity.this, CustomerReviewActivity.class);
+//            startActivity(intent);
+//            finish();
+        }, Dialog::dismiss, -1);
     }
 
     @Override

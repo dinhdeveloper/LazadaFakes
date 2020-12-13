@@ -11,12 +11,14 @@ import androidx.fragment.app.FragmentManager;
 import b.laixuantam.myaarlibrary.base.BaseFragmentActivity;
 import b.laixuantam.myaarlibrary.base.BaseParameters;
 import b.laixuantam.myaarlibrary.helper.OnKeyboardVisibilityListener;
+import b.laixuantam.myaarlibrary.widgets.dialog.alert.KAlertDialog;
 import tcd.project.seller.R;
 import tcd.project.seller.fragment.export_product.FragmentExportProduct;
 import tcd.project.seller.fragment.import_product.FragmentImportProduct;
 import tcd.project.seller.fragment.list_base.FragmentListBase;
 import tcd.project.seller.fragment.list_export.FragmentListProductExport;
 import tcd.project.seller.fragment.list_import.FragmentListProductImport;
+import tcd.project.seller.fragment.settings.FragmentFillterOrder;
 import tcd.project.seller.ui.action_bar.base_main_actionbar.BaseMainActionbarViewCallback;
 import tcd.project.seller.ui.action_bar.base_main_actionbar.BaseMainActionbarViewInterface;
 import tcd.project.seller.ui.activity.home_activity.HomeActivityView;
@@ -68,6 +70,11 @@ public class HomeActivity extends BaseFragmentActivity<HomeActivityViewInterface
         isShowContainer ++;
         replaceFragment(new FragmentImportProduct(), true, Animation.SLIDE_IN_OUT);
     }
+
+    public void changeToFragmentFilter(String type) {
+        addFragment(FragmentFillterOrder.newInstance(type),true,Animation.SLIDE_IN_OUT);
+    }
+
 
     public void checkBack() {
 
@@ -161,6 +168,30 @@ public class HomeActivity extends BaseFragmentActivity<HomeActivityViewInterface
 
     @Override
     public void onClickButtonRightActionbar() {
+
+    }
+
+    public void showConfirmAlert(String title, String mess, KAlertDialog.KAlertClickListener actionConfirm, int type) {
+        showConfirmAlert(title, mess, "", "", actionConfirm, null, type);
+    }
+
+    public void showConfirmAlert(String title, String mess, KAlertDialog.KAlertClickListener actionConfirm, KAlertDialog.KAlertClickListener actionCancel, int type) {
+        showConfirmAlert(title, mess, "", "", actionConfirm, actionCancel, type);
+    }
+
+    public void showConfirmAlert(String title, String mess, String titleButtonConfirm, String titleButtonCancel, KAlertDialog.KAlertClickListener actionConfirm, KAlertDialog.KAlertClickListener actionCancel, int type) {
+
+        switch (type) {
+            case KAlertDialog.SUCCESS_TYPE:
+                showCustomerImageAndBgButtonConfirmAlert(title, mess, titleButtonConfirm, R.drawable.button_confirm_alert_dialog, titleButtonCancel, R.drawable.button_cancel_alert_dialog, actionConfirm, actionCancel, R.drawable.ic_img_alert_success);
+                break;
+            case KAlertDialog.WARNING_TYPE:
+                showCustomerImageAndBgButtonConfirmAlert(title, mess, titleButtonConfirm, R.drawable.button_confirm_alert_dialog, titleButtonCancel, R.drawable.button_cancel_alert_dialog, actionConfirm, actionCancel, R.drawable.ic_img_alert_warning);
+                break;
+            case -1:
+                showCustomerImageAndBgButtonConfirmAlert(title, mess, titleButtonConfirm, R.drawable.button_confirm_alert_dialog, titleButtonCancel, R.drawable.button_cancel_alert_dialog, actionConfirm, actionCancel, R.drawable.ic_img_alert_warning_logout);
+                break;
+        }
 
     }
 }

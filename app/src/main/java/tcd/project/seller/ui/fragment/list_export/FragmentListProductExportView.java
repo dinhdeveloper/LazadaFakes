@@ -62,6 +62,10 @@ public class FragmentListProductExportView extends BaseView<FragmentListProductE
         KeyboardUtils.setupUI(getView(), activity);
         setGone(ui.actionAdd);
         setVisible(ui.actionFilter);
+        ui.actionFilter.setOnClickListener(view -> {
+            if (callback != null)
+                callback.onClickFilter();
+        });
 
         Calendar calendar = Calendar.getInstance();
         int hour = calendar.get(Calendar.HOUR_OF_DAY);
@@ -118,6 +122,13 @@ public class FragmentListProductExportView extends BaseView<FragmentListProductE
                 }
             }
         });
+
+        ui.imvMore.setOnClickListener(view -> {
+            if (callback != null) {
+                callback.doLogout();
+            }
+        });
+
         setUpListData();
     }
 
@@ -146,6 +157,11 @@ public class FragmentListProductExportView extends BaseView<FragmentListProductE
         recyclerAdapterWithHF = new RecyclerAdapterWithHF(productExportAdapter);
 
         ui.recycler_view_list_.setAdapter(recyclerAdapterWithHF);
+
+        productExportAdapter.setListener(model -> {
+            if (callback != null)
+                callback.onItemListSelected(model);
+        });
 
         ui.ptrClassicFrameLayout.setLoadMoreEnable(true);
 
@@ -231,7 +247,7 @@ public class FragmentListProductExportView extends BaseView<FragmentListProductE
     @Override
     public void resetListData() {
         listDatas.clear();
-//        orderManagerAdapter.notifyDataSetChanged();
+        productExportAdapter.notifyDataSetChanged();
         ui.recycler_view_list_.getRecycledViewPool().clear();
     }
 
